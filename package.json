@@ -1,0 +1,41 @@
+{
+    "name": "frontend-config",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:llaski/frontend-config.git",
+    "author": "Larry Laski <larry.laski@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "watch": "yarn run development --watch",
+        "dev": "yarn run development",
+        "development": "webpack",
+        "prod": "yarn run production",
+        "production": "webpack --env=production",
+        "eslint": "eslint js/**/*",
+        "stylelint": "stylelint css/**/*",
+        "prettier": "prettier \"./**/*.+(js|jsx|json|css)\"",
+        "format": "yarn run prettier --write",
+        "validate": "yarn run eslint && yarn run stylelint && yarn run prettier --list-different"
+    },
+    "dependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+        "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.6.3",
+        "@fortawesome/fontawesome-pro": "^5.11.2",
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-babel": "^5.3.0",
+        "husky": "^3.0.9",
+        "lint-staged": "^9.4.2",
+        "postcss-easy-import": "^3.0.0",
+        "postcss-extend-rule": "^3.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "^1.18.2",
+        "stylelint": "^11.1.1",
+        "stylelint-config-recommended": "^3.0.0"
+    }
+}
